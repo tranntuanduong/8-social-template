@@ -1,0 +1,65 @@
+/* On tablet and desktop */
+@media (min-width: 850px) {
+    .col-1 {
+        width: 100%;
+    }
+    
+    .col-2 {
+        width: 50%;
+    }
+    
+    .col-2-12 {
+        width: 16.66667%;
+    }
+    
+    .col-3-12 {
+        width: 25%;
+    }
+    
+    .col-7-12 {
+        width: 58.33333%;
+    }
+
+    #header {
+        overflow: initial;
+    }
+
+    .header__nav {
+        display: inline-block;
+    }
+
+    .header__nav > li {
+        float: left;
+    }
+
+    .header__avatar {
+        padding: 0 24px;
+        float: right;
+        height: 100%;
+        display: block;
+    }
+
+    .sub-nav {
+        min-width: 280px;
+    }
+
+    .sub-nav a { 
+        padding-left: 0;
+    }
+
+    #menuLarge > li {
+        display: inline-block;
+    }
+
+    #menuSmall {
+        display: none !important;
+    }
+
+    #mobi-menu {
+        display: none;
+    }   
+
+    .main {
+        margin-top: 30px;
+    }
+}

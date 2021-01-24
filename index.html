@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Social template</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./access/css/style.css">
+        <link rel="stylesheet" href="./access/css/base.css">
+        <link rel="stylesheet" href="./access/css/responsive.css">
+        <link rel="stylesheet" href="./access/font/font-awesome-4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <!-- 
+        header
+        profile
+        shortcuts
+        tags
+        Notification
+        Post
+        News
+     -->
+
+    <body>
+        <div id="header">
+            <ul class="header__nav">
+                <div id="menuLarge">
+                    <li class="header__nav-primary"><a href="#"><i class="fa fa-home mr-16" aria-hidden="true"></i>Logo</a></li>
+                    <li class="header__nav-primary"><a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
+                    <li class="header__nav-primary"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                    <li class="header__nav-primary"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                    <li class="header__nav--quantity" style="--quantity: 3">
+                        <a href="#">
+                            <i class="fa fa-bell" aria-hidden="true"></i>
+                            <ul class="sub-nav">
+                                <li><a href="#">One new friend request</a></li>
+                                <li><a href="#">John Doe posted on your wall</a></li>
+                                <li><a href="#">Jane likes your post</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                </div> 
+            </ul>
+            <!-- If want menu is child of header  -->
+            <!-- <div id="menuSmall">
+                <li class="header__nav-primary"><a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
+                <li class="header__nav-primary"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                <li class="header__nav-primary"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                <li class="header__nav--quantity" style="--quantity: 3">
+                    <a href="#">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                        <ul class="sub-nav">
+                            <li><a href="#">One new friend request</a></li>
+                            <li><a href="#">John Doe posted on your wall</a></li>
+                            <li><a href="#">Jane likes your post</a></li>
+                        </ul>
+                    </a>
+                </li>
+            </div> -->
+            <div class="header__avatar">
+                <img src="https://www.w3schools.com/w3images/avatar3.png" alt="">
+            </div>
+            <!-- <div id="mobi-menu" onclick="showMobileMenu1('header');">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div> -->
+            <div id="mobi-menu" onclick="showMobileMenu2('menuSmall');">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="header__nav">
+            <div id="menuSmall">
+                <li class="header__nav-primary"><a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
+                <li class="header__nav-primary"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                <li class="header__nav-primary"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                <li class="header__nav--quantity" style="--quantity: 3">
+                    <a href="#">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                        <ul class="sub-nav">
+                            <li><a href="#">One new friend request</a></li>
+                            <li><a href="#">John Doe posted on your wall</a></li>
+                            <li><a href="#">Jane likes your post</a></li>
+                        </ul>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="row">
+                <div class="col col-3-12 s-col-1 mt-30">
+                    <div class="card">
+                        <h2 class="profile__name">My Profile</h2>
+                        <div class="profile__img">
+                            <img src="https://www.w3schools.com/w3images/avatar3.png" alt="">
+                        </div>
+                        <div class="profile__content">
+                            <p><i class="fa fa-pencil" aria-hidden="true"></i>Designer, UI</p>
+                            <p><i class="fa fa-home" aria-hidden="true"></i>London, UK</p>
+                            <p><i class="fa fa-birthday-cake" aria-hidden="true"></i>April 1, 1988</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="shortcuts mt-20">
+                        <p><i class="fa fa-users" aria-hidden="true"></i>My Groups</p>
+                        <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i>My event</p>
+                        <p><i class="fa fa-picture-o" aria-hidden="true"></i>My photos</p>
+                    </div> -->
+
+                    <ul class="shortcuts mt-20">
+                        <li onclick="toggleShortcut('my_groups');">
+                            <i class="fa fa-users" aria-hidden="true"></i>My Groups
+                        </li>
+                        <div id="my_groups"class="shortcuts__item">
+                            <p>Some text...</p>
+                        </div>
+                        <li onclick="toggleShortcut('my_events');">
+                            <i class="fa fa-calendar-check-o" aria-hidden="true"></i>My event
+                        </li>
+                        <div id="my_events" class="shortcuts__item">
+                            <p>Some text...</p>
+                        </div>
+                        <li onclick="toggleShortcut('my_photos');">
+                            <i class="fa fa-picture-o" aria-hidden="true"></i>My photos
+                        </li>
+                        <div id="my_photos" class="shortcuts__item">
+                            <div class="row ml-minus-8 mr-minus-8">
+                                <div class="col col-2 s-col-2 shortcuts__item-img">
+                                    <img src="https://www.w3schools.com/w3images/lights.jpg" alt="" class="">
+                                </div>
+                                <div class="col col-2 s-col-2 shortcuts__item-img">
+                                    <img src="https://www.w3schools.com/w3images/nature.jpg" alt="">
+                                </div>
+                                <div class="col col-2 s-col-2 shortcuts__item-img">
+                                    <img src="https://www.w3schools.com/w3images/mountains.jpg" alt="">
+                                </div>
+                                <div class="col col-2 s-col-2 shortcuts__item-img">
+                                    <img src="https://www.w3schools.com/w3images/forest.jpg" alt="">
+                                </div>
+                                <div class="col col-2 s-col-2 shortcuts__item-img">
+                                    <img src="https://www.w3schools.com/w3images/lights.jpg" alt="">
+                                </div>
+                                <div class="col col-2 s-col-2 shortcuts__item-img">
+                                    <img src="https://www.w3schools.com/w3images/snow.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+
+                    <div class="card mt-20">
+                        <p class="tags">Interests</p>
+                        <div class="tag">
+                            <span class="label label--darkslategray">News</span>
+                            <span class="label label--darkslategray">W3Schools</span>
+                            <span class="label label--darkslategray">Labels</span>
+                            <span class="label label--dimgray">Games</span>
+                            <span class="label label--dimgray">Friends</span>
+                            <span class="label label--dimgray">Games</span>
+                            <span class="label label--dimgray">Friends</span>
+                            <span class="label label--darkgray">Food</span>
+                            <span class="label label--gainsboro">Design</span>
+                            <span class="label label--gainsboro">Art</span>
+                            <span class="label label--whitesmoke">Photos</span>
+                        </div>
+                    </div>
+
+                    <div id="notification" class="card mt-20">
+                        <h3 class="notification__heading">Hey !</h3>
+                        <p class="notification__text">People are looking at your profile. Find out who.</p>
+                        <span class="notification__close" onclick="closeNotification('notification');"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+
+                <div class="col col-7-12 s-col-1 mt-30">
+                    <div class="card post">
+                        <div class="post__heading">Social Media template by w3.css</div>
+                        <input type="text" class="post__input" value="Status: Feeling Blue">
+                        <div class="btn btn--post"><i class="fa fa-pencil" aria-hidden="true"></i>Post</div>
+                    </div>
+                    <div class="news">
+                        <div class="card new mt-20">
+                            <div class="new__heading">
+                                <div class="new__heading-me">
+                                    <img src="https://www.w3schools.com/w3images/avatar2.png" alt="">
+                                    <h4>John Doe</h4>
+                                </div>
+                                <p class="new__heading-times">1 min</p>
+                            </div>
+                            <hr class="clear-hr">
+                            <div class="new__content">
+                                <p class="new__content-text">Have you seen this?</p>
+                                <div class="row mr-minus-8 ml-minus-8">
+                                    <div class="col col-1 s-col-1">
+                                        <img src="https://www.w3schools.com/w3images/nature.jpg" alt="" class="new__content-img">
+                                    </div>
+                                </div>
+                                <p class="new__content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <div class="btn btn--post">
+                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                    Like
+                                </div>
+                                <div class="btn btn--post">
+                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                    Comments
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card new mt-20">
+                            <div class="new__heading">
+                                <div class="new__heading-me">
+                                    <img src="https://www.w3schools.com/w3images/avatar5.png" alt="">
+                                    <h4>John Doe</h4>
+                                </div>
+                                <p class="new__heading-times">24 min</p>
+                            </div>
+                            <hr class="clear-hr">
+                            <div class="new__content">
+                                <p class="new__content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                                <div class="btn btn--post">
+                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                    Like
+                                </div>
+                                <div class="btn btn--post">
+                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                    Comments
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card new mt-20">
+                            <div class="new__heading">
+                                <div class="new__heading-me">
+                                    <img src="https://www.w3schools.com/w3images/avatar6.png" alt="">
+                                    <h4>Angie Jane</h4>
+                                </div>
+                                <p class="new__heading-times">32 min</p>
+                            </div>
+                            <hr class="clear-hr">
+                            <div class="new__content">
+                                <p class="new__content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <div class="row mr-minus-8 ml-minus-8">
+                                    <div class="col col-2 s-col-1">
+                                        <img src="https://www.w3schools.com/w3images/lights.jpg" alt="" class="new__content-img">
+                                    </div>
+                                    <div class="col col-2 s-col-1">
+                                        <img src="https://www.w3schools.com/w3images/nature.jpg" alt="" class="new__content-img">
+                                    </div>
+                                </div>
+                                <div class="btn btn--post">
+                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                    Like
+                                </div>
+                                <div class="btn btn--post">
+                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                    Comments
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div class="col col-2-12 s-col-1 mt-30">
+                    <div class="card aside-session">
+                        <p class="aside-session__text">Upcoming Events:</p>
+                        <img src="https://www.w3schools.com/w3images/forest.jpg" alt="" class="aside-session__img">
+                        <p class="aside-session__text mt-16">Holiday</p>
+                        <p class="aside-session__text">Friday 15:00</p>
+                        <div class="btn btn--large">Info</div>
+                    </div>
+
+                    <div class="card aside-session mt-20">
+                        <p class="aside-session__text">Friend Request</p>
+                        <img src="https://www.w3schools.com/w3images/avatar6.png"
+                            alt="" class="aside-session__img aside-session__img--small">
+                        <p class="aside-session__text mt-16">Jane Doe</p>
+                        <p class="aside-session__text">Friday 15:00</p>
+                        <div class="wrap-btn">
+                            <div class="btn btn--check">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                            </div>
+                            <div class="btn btn--close">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-20 advertise">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLVLvYujmhR5XU4H_1MOtU8nRd9E8dBKMmfQ&usqp=CAU" alt="">
+                    </div>
+
+                    <div class="card mt-20 bugs">
+                        <i class="fa fa-bug" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function closeNotification(id) {
+                const notificationE = document.getElementById(id);
+                notificationE.style.display= 'none';
+            }
+
+            
+            function toggleShortcut (id) {
+                const shortcutE = document.getElementById(id);     
+                var isOpenShortcut = shortcutE.style.display === 'block';
+                if (isOpenShortcut) {
+                    shortcutE.style.display = 'none';
+                } else {
+                    shortcutE.style.display = 'block'
+                }
+            }
+
+            function showMobileMenu (id) {
+                const mobileMenuE = document.getElementById(id);
+                var isShowMobileMenu = mobileMenuE.style.overflow === 'initial';
+                if (isShowMobileMenu) {
+                    mobileMenuE.style.overflow = 'hidden';
+                } else {
+                    mobileMenuE.style.overflow = 'initial';
+                }
+            }
+
+            function showMobileMenu2 (id) {
+                const mobileMenuSmallE = document.getElementById(id);
+                var isShowMobileMenuSmall = mobileMenuSmallE.style.display === 'block'
+                console.log(mobileMenuSmallE)
+                if (isShowMobileMenuSmall) {
+                    mobileMenuSmallE.style.display = 'none';
+                } else {
+                    mobileMenuSmallE.style.display = 'block';
+                }
+            }
+
+
+        </script>
+    </body>
+</html>
